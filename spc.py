@@ -81,7 +81,7 @@ def run_length(delta, chart, rng, k=0.5, h=5.0, cap=100_000):
     return cap
 
 
-def arl(delta, chart, trials=1000, seed=1):
+def arl(delta, chart, trials=5000, seed=1):
     rng = np.random.default_rng(seed)
     return float(np.mean([run_length(delta, chart, rng) for _ in range(trials)]))
 
